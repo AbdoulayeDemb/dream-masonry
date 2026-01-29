@@ -1,6 +1,25 @@
 # DreamMasonry
 
-A high-performance virtualized masonry grid for React. Built with Float64Array-backed layout calculations, GPU-accelerated positioning, and hysteresis-based scroll updates for buttery smooth rendering of 10,000+ items.
+[![npm version](https://img.shields.io/npm/v/dream-masonry.svg)](https://www.npmjs.com/package/dream-masonry)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/dream-masonry)](https://bundlephobia.com/package/dream-masonry)
+[![license](https://img.shields.io/npm/l/dream-masonry.svg)](https://github.com/adioof/dream-masonry/blob/main/LICENSE)
+
+A high-performance **virtualized masonry grid layout** for React. Create Pinterest-style layouts, image galleries, and card grids with **infinite scroll** and **virtual rendering** for buttery smooth performance with 10,000+ items.
+
+**Perfect for:** Photo galleries, Pinterest clones, card layouts, image grids, portfolio sites, e-commerce product grids, and any masonry/waterfall layout.
+
+## Why DreamMasonry?
+
+| Feature | DreamMasonry | Masonic | react-masonry-css |
+|---------|--------------|---------|-------------------|
+| Virtualized rendering | Yes | Yes | No |
+| Infinite scroll built-in | Yes | No | No |
+| Float64Array layout | Yes | No | No |
+| Bundle size | ~12KB | ~14KB | ~3KB |
+| Responsive columns | Yes | Yes | Yes |
+| Custom scroll container | Yes | Yes | No |
+| Headless hooks | Yes | Yes | No |
+| Zero dependencies | Yes | No | Yes |
 
 ## Features
 
