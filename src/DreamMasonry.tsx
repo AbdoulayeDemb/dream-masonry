@@ -3,13 +3,13 @@ import { GridItem as GridItemComponent } from './components/GridItem';
 import { useGrid } from './hooks/use-grid';
 import { useInfiniteScroll } from './hooks/use-infinite-scroll';
 import { injectStyles } from './inject-styles';
-import type { DreamGridProps, GridItem } from './types';
+import type { DreamMasonryProps, GridItem } from './types';
 
 injectStyles();
 
 const NOOP = () => {};
 
-const DreamGrid = <T extends GridItem>({
+const DreamMasonry = <T extends GridItem>({
   items,
   renderItem,
   maxColumnCount = 5,
@@ -28,7 +28,7 @@ const DreamGrid = <T extends GridItem>({
   renderEmpty,
   className,
   style,
-}: DreamGridProps<T>) => {
+}: DreamMasonryProps<T>) => {
   const {
     containerRef,
     dimensions,
@@ -94,4 +94,4 @@ const DreamGrid = <T extends GridItem>({
   );
 };
 
-export default memo(DreamGrid) as typeof DreamGrid;
+export default memo(DreamMasonry) as typeof DreamMasonry;

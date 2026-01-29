@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { DreamGrid } from 'dream-grid';
+import { DreamMasonry } from 'dream-masonry';
 
 type Photo = {
   id: string;
@@ -49,14 +49,14 @@ export default function App() {
     <div style={{ maxWidth: 1400, margin: '0 auto', padding: '24px 16px' }}>
       <div style={{ marginBottom: 32 }}>
         <h1 style={{ fontSize: 28, fontWeight: 700, margin: 0 }}>
-          DreamGrid Demo
+          DreamMasonry Demo
         </h1>
         <p style={{ color: '#888', margin: '8px 0 0' }}>
           {items.length} items loaded{hasMore ? ' — scroll down for more' : ' — all loaded'}
         </p>
       </div>
 
-      <DreamGrid<Photo>
+      <DreamMasonry<Photo>
         items={items}
         maxColumnCount={5}
         hasMore={hasMore}

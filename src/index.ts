@@ -1,4 +1,4 @@
-export { default as DreamGrid } from './DreamGrid';
+export { default as DreamMasonry } from './DreamMasonry';
 export { useGrid } from './hooks/use-grid';
 export { usePositioner } from './hooks/use-positioner';
 export { useInfiniteScroll } from './hooks/use-infinite-scroll';
@@ -16,7 +16,7 @@ export {
 
 // Types
 export type {
-  DreamGridProps,
+  DreamMasonryProps,
   GridItem,
   Position,
   Dimensions,

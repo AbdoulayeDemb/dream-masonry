@@ -11,7 +11,7 @@ export type GridItem = {
   aspectRatio?: number;
 };
 
-export type DreamGridProps<T extends GridItem> = {
+export type DreamMasonryProps<T extends GridItem> = {
   items: T[];
   renderItem: (item: T, index: number) => ReactNode;
   maxColumnCount?: number;

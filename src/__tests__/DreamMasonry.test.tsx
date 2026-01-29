@@ -1,7 +1,7 @@
 import React from 'react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import DreamGrid from '../DreamGrid';
+import DreamMasonry from '../DreamMasonry';
 
 // Mock ResizeObserver
 class MockResizeObserver {
@@ -31,7 +31,7 @@ beforeEach(() => {
   });
 });
 
-describe('DreamGrid', () => {
+describe('DreamMasonry', () => {
   const items = [
     { id: '1', width: 200, height: 300 },
     { id: '2', width: 200, height: 200 },
@@ -40,7 +40,7 @@ describe('DreamGrid', () => {
 
   it('renders items via renderItem', () => {
     render(
-      <DreamGrid
+      <DreamMasonry
         items={items}
         renderItem={(item) => <div data-testid={`item-${item.id}`}>{item.id}</div>}
       />,
@@ -53,7 +53,7 @@ describe('DreamGrid', () => {
 
   it('renders loader when isLoading', () => {
     render(
-      <DreamGrid
+      <DreamMasonry
         items={[]}
         renderItem={() => null}
         isLoading
@@ -66,7 +66,7 @@ describe('DreamGrid', () => {
 
   it('renders empty state when no items', () => {
     render(
-      <DreamGrid
+      <DreamMasonry
         items={[]}
         renderItem={() => null}
         renderEmpty={() => <div data-testid="empty">No items</div>}
@@ -78,7 +78,7 @@ describe('DreamGrid', () => {
 
   it('applies className to container', () => {
     const { container } = render(
-      <DreamGrid
+      <DreamMasonry
         items={items}
         renderItem={(item) => <div>{item.id}</div>}
         className="my-grid"
@@ -91,7 +91,7 @@ describe('DreamGrid', () => {
 
   it('renders nothing when items array is empty and no renderEmpty', () => {
     const { container } = render(
-      <DreamGrid items={[]} renderItem={() => null} />,
+      <DreamMasonry items={[]} renderItem={() => null} />,
     );
 
     // Container exists but has no children

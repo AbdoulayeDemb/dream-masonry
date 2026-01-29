@@ -1,4 +1,4 @@
-const STYLE_ID = 'dream-grid-styles';
+const STYLE_ID = 'dream-masonry-styles';
 
 const CSS = `
 .dg-container {

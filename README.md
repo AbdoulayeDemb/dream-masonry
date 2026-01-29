@@ -1,4 +1,4 @@
-# DreamGrid
+# DreamMasonry
 
 A high-performance virtualized masonry grid for React. Built with Float64Array-backed layout calculations, GPU-accelerated positioning, and hysteresis-based scroll updates for buttery smooth rendering of 10,000+ items.
 
@@ -24,7 +24,7 @@ npm install dream-masonry
 ## Quick Start
 
 ```tsx
-import { DreamGrid } from 'dream-masonry';
+import { DreamMasonry } from 'dream-masonry';
 
 type Photo = {
   id: string;
@@ -35,7 +35,7 @@ type Photo = {
 
 function Gallery({ photos }: { photos: Photo[] }) {
   return (
-    <DreamGrid
+    <DreamMasonry
       items={photos}
       maxColumnCount={4}
       renderItem={(photo) => (
@@ -67,7 +67,7 @@ function InfiniteGallery() {
   };
 
   return (
-    <DreamGrid
+    <DreamMasonry
       items={items}
       renderItem={(photo) => <img src={photo.src} alt="" />}
       hasMore={hasMore}
@@ -84,7 +84,7 @@ function InfiniteGallery() {
 ## Custom Layout
 
 ```tsx
-<DreamGrid
+<DreamMasonry
   items={items}
   renderItem={(item) => <Card item={item} />}
   maxColumnCount={6}
@@ -104,7 +104,7 @@ function ScrollablePanel() {
 
   return (
     <div ref={scrollRef} style={{ height: '100vh', overflow: 'auto' }}>
-      <DreamGrid
+      <DreamMasonry
         items={items}
         renderItem={(item) => <Card item={item} />}
         scrollContainer={scrollRef}
@@ -189,7 +189,7 @@ useInfiniteScroll({
 
 ## API
 
-### `<DreamGrid>` Props
+### `<DreamMasonry>` Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
